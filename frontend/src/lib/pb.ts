@@ -18,7 +18,7 @@ interface TypedPocketbase extends Pocketbase {
 	collection(idOrName: 'plants'): RecordService<Plant>;
 }
 
-export const BASE_URL = 'http://localhost:8090' as const;
+export const BASE_URL = window.location.origin;
 
 const pb = new Pocketbase(BASE_URL) as TypedPocketbase;
 
